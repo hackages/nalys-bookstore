@@ -4,9 +4,13 @@
 
 <!--Books container-->
 <div class="container">
-  <a [routerLink]="['/books', item.id]" class="item" *ngFor="let item of items">
+  <a
+    [routerLink]="['/laptop', item.id]"
+    class="item"
+    *ngFor="let item of items"
+  >
     <div class="module hero">
-      <h4>{{ item.title }}</h4>
+      <h4>{{ item.name }}</h4>
     </div>
   </a>
 </div>

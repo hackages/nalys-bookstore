@@ -1,6 +1,10 @@
 <!--Header component-->
 <header>
   <h1>{{ title }}</h1>
+  <div>
+    <a routerLink="books">Books</a>
+    <a routerLink="laptops">Laptops</a>
+  </div>
   <div class="userinfo" *ngIf="username">
     <span>{{ username }}</span>
     <button (click)="logout()">Logout</button>

@@ -1,4 +1,3 @@
-import { LoginComponent } from './components/login/login.component';
 import { routes } from './app.routing';
 import { InMemoryDataService } from './services/api.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,6 +13,7 @@ import {
   DashboardComponent,
   BookDetailComponent,
   BookstoreComponent,
+  LaptopComponent,
   LaptopstoreComponent
 } from './components';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -26,10 +26,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     BooksComponent,
     HeaderComponent,
     DashboardComponent,
-    LoginComponent,
     BookDetailComponent,
     BookstoreComponent,
-    LaptopstoreComponent
+    LaptopstoreComponent,
+    LaptopComponent
   ],
   imports: [
     HttpClientModule,

@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { LaptopService } from './../../services/laptop.service';
+import { Computer } from './../../../types/computer';
+import { Component, OnInit, EventEmitter } from '@angular/core';
+import { of, Observable } from 'rxjs';
 
 @Component({
   selector: 'bs-laptopstore',
-  templateUrl: './laptopstore.component.html',
-  styleUrls: ['./laptopstore.component.css']
+  templateUrl: './laptopstore.component.html'
 })
 export class LaptopstoreComponent implements OnInit {
+  laptops$: Observable<Computer[]> = of([]);
+  termEmitter: EventEmitter<string> = new EventEmitter();
 
-  constructor() { }
+  constructor(private lp: LaptopService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.laptops$ = this.lp.search(this.termEmitter.asObservable());
   }
-
 }

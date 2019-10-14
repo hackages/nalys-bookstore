@@ -10,10 +10,12 @@ export const BooksUrl = new InjectionToken('bookUrl', {
   factory: () => 'app/books'
 });
 
-// const MY_SERVICE_TOKEN = new InjectionToken<MyService>(
-//   'Manually constructed MyService',
-//   {
-//     providedIn: 'root',
-//     factory: () => new MyService(inject(MyDep))
-//   }
-// );
+export const SearchByNameUrl = new InjectionToken('SearchByNameUrl', {
+  providedIn: 'root',
+  factory: () => 'app/computers/?name='
+});
+
+export const ComputersUrl = new InjectionToken('computerUrl', {
+  providedIn: 'root',
+  factory: () => 'app/computers'
+});
