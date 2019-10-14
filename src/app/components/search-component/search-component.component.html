@@ -1,0 +1,13 @@
+<!--Search component-->
+
+<div id="search-component">
+  <h4>Search in your library</h4>
+  <input
+    id="search-box"
+    [placeholder]="placeholder"
+    #searchInput
+    (input)="termEmitter.emit(searchInput.value)"
+  />
+</div>
+
+<!--End Search component-->
