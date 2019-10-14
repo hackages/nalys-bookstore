@@ -1,3 +1,12 @@
-<bs-search-component [termEmitter]="termEmitter"></bs-search-component>
-
-<bs-books [books]="books$ | async"></bs-books>
+<div class="container">
+  <a [routerLink]="['/books']" class="item">
+    <div class="module hero">
+      <h4>BookStore</h4>
+    </div>
+  </a>
+  <a [routerLink]="['/laptops']" class="item">
+    <div class="module hero">
+      <h4>LaptopStore</h4>
+    </div>
+  </a>
+</div>

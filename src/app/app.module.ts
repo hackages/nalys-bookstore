@@ -12,7 +12,9 @@ import {
   BooksComponent,
   HeaderComponent,
   DashboardComponent,
-  BookDetailComponent
+  BookDetailComponent,
+  BookstoreComponent,
+  LaptopstoreComponent
 } from './components';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -25,7 +27,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     DashboardComponent,
     LoginComponent,
-    BookDetailComponent
+    BookDetailComponent,
+    BookstoreComponent,
+    LaptopstoreComponent
   ],
   imports: [
     HttpClientModule,

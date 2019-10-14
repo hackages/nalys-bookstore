@@ -4,7 +4,9 @@ import { BookResolver } from './services/book.resover';
 import {
   DashboardComponent,
   BookDetailComponent,
-  LoginComponent
+  LoginComponent,
+  LaptopstoreComponent,
+  BookstoreComponent
 } from './components';
 
 export const routes: Routes = [
@@ -20,6 +22,16 @@ export const routes: Routes = [
     canActivate: [AuthGuard]
   },
   { path: 'login', component: LoginComponent },
+  {
+    path: 'books',
+    component: BookstoreComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'laptops',
+    component: LaptopstoreComponent,
+    canActivate: [AuthGuard]
+  },
   {
     path: 'books/:id',
     component: BookDetailComponent,
