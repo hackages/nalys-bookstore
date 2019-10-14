@@ -1,15 +1,18 @@
-import { Injectable } from '@angular/core';
+import { BooksUrl, SearchByTitleUrl } from './urls.service';
+import { Injectable, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { switchMap, startWith } from 'rxjs/operators';
 import { Book } from './../../types/book';
 @Injectable({ providedIn: 'root' })
 export class BookService {
-  booksUrl = '/api/books';
-  searchByTitleUrl = 'app/books/?title=';
   private headers = new Headers({ 'Content-Type': 'application/json' });
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    @Inject(BooksUrl) private booksUrl: string,
+    @Inject(SearchByTitleUrl) private searchByTitleUrl: string
+  ) {}
 
   // Gets all the books from our mock server
   getBooks(): Observable<Book[]> {
