@@ -1,0 +1,13 @@
+<ng-content select="h3"> </ng-content>
+<hr />
+<br />
+
+<!--Books container-->
+<div class="container">
+  <a [routerLink]="['/books', item.id]" class="item" *ngFor="let item of items">
+    <div class="module hero">
+      <h4>{{ item.title }}</h4>
+    </div>
+  </a>
+</div>
+<!--End Books container-->

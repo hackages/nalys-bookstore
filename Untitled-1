@@ -1,0 +1,32 @@
+- Demo to do: 
+    - Inject
+    - Guards with login
+    - login 
+    - reset button
+    - directive in Angular
+    - ng-content
+    - build your own directive
+    - lifecycle methods
+    - operators
+        - pluck
+        - startWith
+        - retryWhen 
+        - zip 
+        - groupBy
+        - throtlleTime
+        - timestamp
+        - auditTime
+        - race
+        - skip 
+        - skipUntil
+        - skipWhile
+        - takeWhile
+        - tap
+        - reduce
+        - min
+        - max
+        - endWith
+
+
+
+
